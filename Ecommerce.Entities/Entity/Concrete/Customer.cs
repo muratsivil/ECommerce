@@ -19,6 +19,6 @@ namespace Ecommerce.Entities.Entity.Concrete
         public string Address { get; set; }
         public string City { get; set; }
 
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

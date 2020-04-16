@@ -17,6 +17,6 @@ namespace Ecommerce.Entities.Entity.Concrete
         public string ContactTitle { get; set; }
         public string Address { get; set; }
 
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Product { get; set; }
     }
 }

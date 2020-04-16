@@ -16,8 +16,9 @@ namespace Ecommerce.Entities.Entity.Concrete
         public string ProductDescription { get; set; }
         public decimal UnitInStock { get; set; }
         public short UnitPrice { get; set; }
+        public string ImageURL { get; set; }
 
-        public virtual ICollection<Order_Detail> Order_Details { get; set; }
+        public virtual ICollection<Order_Detail> Order_Detail { get; set; }
 
         public Guid CategoryId { get; set; }
         public virtual Category Category { get; set; }

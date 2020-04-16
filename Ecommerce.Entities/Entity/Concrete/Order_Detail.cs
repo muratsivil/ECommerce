@@ -10,7 +10,23 @@ namespace Ecommerce.Entities.Entity.Concrete
     {
         public short UnitPrice { get; set; }
         public decimal Quantity { get; set; }
-        public float Discount { get; set; }
+
+        private float _discount;
+        public float Discount 
+        {
+            get
+            {
+                if (_discount > 100 || _discount <= 0)
+                {
+                    throw new Exception("Invalid Discount");
+                }
+                else
+                {
+                    return _discount;
+                }
+            }
+            set { _discount = value; }
+        }
 
         public Guid OrderId { get; set; }
         public virtual Order Order { get; set; }

@@ -18,6 +18,6 @@ namespace Ecommerce.Entities.Entity.Concrete
         public string TitleOfCourtesy { get; set; }
         public DateTime BirthDate { get; set; }
 
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

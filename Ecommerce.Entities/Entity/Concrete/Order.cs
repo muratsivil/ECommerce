@@ -16,7 +16,7 @@ namespace Ecommerce.Entities.Entity.Concrete
         [Required]
         public DateTime ShippedDate { get; set; }
 
-        public virtual ICollection<Order_Detail> Order_Details { get; set; }
+        public virtual ICollection<Order_Detail> Order_Detail { get; set; }
 
         public Guid CustomerId { get; set; }
         public virtual Customer Customer { get; set; }

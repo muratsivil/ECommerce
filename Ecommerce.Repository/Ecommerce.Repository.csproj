@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,7 +42,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\Abstraction\ICategoryRepository.cs" />
+    <Compile Include="Infrastructure\Abstraction\IOrderDetailRepository.cs" />
+    <Compile Include="Infrastructure\Abstraction\IOrderRepository.cs" />
+    <Compile Include="Infrastructure\Abstraction\IProductRepository.cs" />
+    <Compile Include="Infrastructure\Abstraction\ISuppliersRepository.cs" />
+    <Compile Include="Infrastructure\Concrete\EfBaseRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ecommerce.DataAccess\Ecommerce.DataAccess.csproj">
+      <Project>{29F7318C-FF95-4C29-AD96-CA099C7D1BA8}</Project>
+      <Name>Ecommerce.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ecommerce.Entities\Ecommerce.Entities.csproj">
+      <Project>{D39E9087-7F28-4F14-A2C4-2A325851A5CF}</Project>
+      <Name>Ecommerce.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

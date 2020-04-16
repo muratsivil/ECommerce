@@ -15,6 +15,6 @@ namespace Ecommerce.Entities.Entity.Concrete
         public string CategoryDescription { get; set; }
         public string ImageURL { get; set; }
 
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Product { get; set; }
     }
 }
